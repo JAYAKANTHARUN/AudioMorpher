@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom'
 import homeimage from '../images/homeimage1.png'
 import homedivider from '../images/homedivider.png'
-import {RiArrowDropDownLine} from 'react-icons/ri'
+import { RiArrowDropDownLine } from 'react-icons/ri'
 
 import { animateScroll as scroll } from 'react-scroll';
 
@@ -47,6 +47,62 @@ const Home = () => {
 
         requestAnimationFrame(scrollAnimation);
     };
+
+    const [visible1, setvisible1] = useState(false)
+    const [visible2, setvisible2] = useState(false)
+    const [visible3, setvisible3] = useState(false)
+    const [visible4, setvisible4] = useState(false)
+    const [visible5, setvisible5] = useState(false)
+    const [visible6, setvisible6] = useState(false)
+
+    const handleplus1 = () => {
+        setvisible1(!visible1)
+        setvisible2(false)
+        setvisible4(false)
+        setvisible5(false)
+        setvisible3(false)
+        setvisible6(false)
+    }
+    const handleplus2 = () => {
+        setvisible2(!visible2)
+        setvisible1(false)
+        setvisible4(false)
+        setvisible5(false)
+        setvisible3(false)
+        setvisible6(false)
+    }
+    const handleplus3 = () => {
+        setvisible3(!visible3)
+        setvisible2(false)
+        setvisible4(false)
+        setvisible5(false)
+        setvisible1(false)
+        setvisible6(false)
+    }
+    const handleplus4 = () => {
+        setvisible4(!visible4)
+        setvisible2(false)
+        setvisible1(false)
+        setvisible5(false)
+        setvisible3(false)
+        setvisible6(false)
+    }
+    const handleplus5 = () => {
+        setvisible5(!visible5)
+        setvisible2(false)
+        setvisible4(false)
+        setvisible1(false)
+        setvisible3(false)
+        setvisible6(false)
+    }
+    const handleplus6 = () => {
+        setvisible6(!visible6)
+        setvisible2(false)
+        setvisible4(false)
+        setvisible5(false)
+        setvisible3(false)
+        setvisible1(false)
+    }
 
     return (
         <div>
@@ -119,7 +175,7 @@ const Home = () => {
                     </div>
                 </div>
             </section>
-            <section className='bg-[#FAF0E6] border-b-[10px] border-[#B9B4C7]'>
+            <section className='bg-[#FAF0E6] border-b-[10px] border-[#352F44]'>
                 <div className='h-[100vh] text-center'>
                     <h1 className='font-poppins font-bold sm:text-[30px] text-[20px] text-[#5C5470] sm:py-[50px] py-[15px] '>Unlock the Power of Audio Tools</h1>
                     <div className='grid sm:grid-cols-3 grid-cols-2 sm:mx-[50px] mx-[5px] '>
@@ -152,6 +208,68 @@ const Home = () => {
                             <svg className='mx-auto sm:mt-[20px] mt-[5px] sm:w-[60px] w-[40px]' xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 50 50" fill-rule="evenodd"><path d="M8.012 0h33.976c2.786 0 3.796.3 4.815.835a5.68 5.68 0 0 1 2.363 2.363c.545 1.02.835 2.03.835 4.815v33.976c0 2.786-.3 3.796-.835 4.815a5.68 5.68 0 0 1-2.363 2.363c-1.02.545-2.03.835-4.815.835H8.012c-2.786 0-3.796-.3-4.815-.835a5.68 5.68 0 0 1-2.363-2.363C.3 45.784 0 44.774 0 41.988V8.012c0-2.786.3-3.796.835-4.815A5.68 5.68 0 0 1 3.197.835C4.216.3 5.226 0 8.012 0z" fill="#352F44"></path><g fill="#FFF"><path d="M23.366 13.26a1.25 1.25 0 1 1 .318 2.48c-5.352.686-9.434 5.212-9.434 10.638 0 4.407 2.692 8.285 6.726 9.926a1.25 1.25 0 0 1-.942 2.316c-4.963-2.02-8.284-6.804-8.284-12.242 0-6.697 5.03-12.273 11.616-13.118zm14.778 11.437a1.25 1.25 0 1 1-2.475.354 11.6 11.6 0 0 0-.905-3.163 1.25 1.25 0 1 1 2.278-1.03c.545 1.205.908 2.482 1.102 3.84zM26.71 39.493a1.25 1.25 0 0 1-.354-2.475c1.1-.157 2.125-.445 3.09-.872a1.25 1.25 0 0 1 1.013 2.286c-1.178.522-2.425.872-3.748 1.06zm8.792-4.998a1.25 1.25 0 1 1-2-1.5c.718-.957 1.262-1.91 1.627-2.866a1.25 1.25 0 1 1 2.335.893C37 32.206 36.35 33.36 35.5 34.495z" fill-rule="nonzero"></path><path d="M24.282 21c-.427 0-.78-.354-.78-.78V9.28c0-.427.354-.78.78-.78.208 0 .403.085.55.232l5.47 5.47c.146.146.232.342.232.55s-.085.403-.232.55l-5.47 5.47c-.146.146-.342.232-.55.232z"></path></g></svg>
                             <h1 className='font-poppins font-bold sm:text-[20px] text-[14px] text-[#352F44] sm:my-[15px] mb-[5px] '>Loop Audio</h1>
                             <h1 className='font-poppins sm:text-[15px] text-[11px] text-[#352F44] mx-[5px] '>Effortlessly loop and repeat audio sections for a seamless listening experience.</h1>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section className='bg-[#352F44] h-[60vh] '>
+                <div className='sm:mx-[200px] mx-[20px] sm:pt-[80px] pt-[30px] text-center '>
+                    <h1 className='font-poppins font-bold text-[#B9B4C7] sm:text-[37px] text-[25px] sm:pb-[50px] pb-[30px] '>Trusted by Millions for Audio Solutions</h1>
+                    <h1 className='font-poppins text-[#FAF0E6] sm:text-[22px] text-[16px] '>AudioMorpher is your number one web app for editing audios with ease. Enjoy all the tools you need to work efficiently with your digital files while keeping your data safe and secure.</h1>
+                    <div className='flex justify-center items-center sm:gap-[100px] gap-[50px] sm:py-[60px] py-[40px] '>
+                        <img className='sm:w-[125px] w-[100px] ' src="https://www.ilovepdf.com/img/logos/iso-logo.svg" alt="wait" />
+                        <img className='sm:w-[125px] w-[100px] ' src="https://www.ilovepdf.com/img/logos/ssl-encrypted-logo.svg" alt="wait" />
+                    </div>
+                </div>
+            </section>
+            <section className="bg-[#FAF0E6]  sm:py-[70px] py-[50px]">
+                <div className="max-w-[800px] mx-auto px-[15px] ">
+                    <h2 className="sm:text-[40px] text-[25px] font-poppins font-bold text-[#352F44] text-center">FAQ ?</h2>
+                    <div className="py-[30px]  ">
+                        <div className="bg-[#5C5470] mb-[2px]">
+                            <div className="p-[20px] text-[#FAF0E6] sm:text-[20px] text-[16px] font-poppins relative border-b-2 border-b-[#B9B4C7] hover:bg-[#352F44]  transition duration-300 ease-in-out cursor-pointer" onClick={handleplus1}>
+                                <h3 className='mr-[50px] '>How to edit audio files ?</h3><span className="absolute right-[30px] top-[20px]">{visible1 ? '-' : '+'}</span>
+                            </div>
+
+                            <div className={`text-[#FAF0E6] sm:text-[16px] text-[13px] font-poppins overflow-hidden transition-all duration-500 ease-in-out ${visible1 ? 'scale-100 h-auto p-[20px] origin-top' : 'scale-y-0 h-[0px] origin-top'}`}>
+                                <p>Upload your audio file more than once. You can upload it as many times as you want to create longer loops. Save the file as one audio track.</p>
+                            </div>
+                        </div>
+                        <div className="bg-[#5C5470] mb-[2px]">
+                            <div className="p-[20px] text-[#FAF0E6] sm:text-[20px] text-[16px] font-poppins relative border-b-2 border-b-[#B9B4C7] hover:bg-[#352F44]  transition duration-300 ease-in-out cursor-pointer" onClick={handleplus2}>
+                                <h3 className='mr-[50px] '>What audio file formats is AudioMorpher compatible with ?</h3><span className="absolute right-[30px] top-[20px]">{visible2 ? '-' : '+'}</span>
+                            </div>
+
+                            <div className={`text-[#FAF0E6] sm:text-[16px] text-[13px] font-poppins overflow-hidden transition-all duration-500 ease-in-out ${visible2 ? 'scale-100 h-auto p-[20px] origin-top' : 'scale-y-0 h-[0px] origin-top'}`}>
+                                <p>Plenty! AudioMorpher works with the following audio file formats: AAC, FLAC, M4A, MP3, OGA, OGG, OPUS, WAV and WAVE. You can also upload a video file and seperate your audio from the video.</p>
+                            </div>
+                        </div>
+                        <div className="bg-[#5C5470] mb-[2px]">
+                            <div className="p-[20px] text-[#FAF0E6] sm:text-[20px] text-[16px] font-poppins relative border-b-2 border-b-[#B9B4C7] hover:bg-[#352F44]  transition duration-300 ease-in-out cursor-pointer" onClick={handleplus3}>
+                                <h3 className='mr-[50px] '>What is the best song editing software?</h3><span className="absolute right-[30px] top-[20px]">{visible3 ? '-' : '+'}</span>
+                            </div>
+
+                            <div className={`text-[#FAF0E6] sm:text-[16px] text-[13px] font-poppins overflow-hidden transition-all duration-500 ease-in-out ${visible3 ? 'scale-100 h-auto p-[20px] origin-top' : 'scale-y-0 h-[0px] origin-top'}`}>
+                                <p>While there are many free and paid audio editing software out there, AudioMorpher stands out because of its ease of use, and practicality. With AudioMorpher, you don’t need to install clunky apps on your device. You can edit your audio and video files online.</p>
+                            </div>
+                        </div>
+                        <div className="bg-[#5C5470] mb-[2px]">
+                            <div className="p-[20px] text-[#FAF0E6] sm:text-[20px] text-[16px] font-poppins relative border-b-2 border-b-[#B9B4C7] hover:bg-[#352F44]  transition duration-300 ease-in-out cursor-pointer" onClick={handleplus4}>
+                                <h3 className='mr-[50px] '>Which software do musicians use?</h3><span className="absolute right-[30px] top-[20px]">{visible4 ? '-' : '+'}</span>
+                            </div>
+
+                            <div className={`text-[#FAF0E6] sm:text-[16px] text-[13px] font-poppins overflow-hidden transition-all duration-500 ease-in-out ${visible4 ? 'scale-100 h-auto p-[20px] origin-top' : 'scale-y-0 h-[0px] origin-top'}`}>
+                                <p>AudioMorpher is an increasingly popular software for musicians and singers. This is because it is easy to use, free, and requires no download. Our modern and intuitive interface is proving popular with content creators of all types. Try AudioMorpher now to see why! No credit card, sign-up or download needed.</p>
+                            </div>
+                        </div>
+                        <div className="bg-[#5C5470] mb-[2px]">
+                            <div className="p-[20px] text-[#FAF0E6] sm:text-[20px] text-[16px] font-poppins relative border-b-2 border-b-[#B9B4C7] hover:bg-[#352F44]  transition duration-300 ease-in-out cursor-pointer" onClick={handleplus5}>
+                                <h3 className='mr-[50px] '>Is AudioMorpher's audio editing software free to use?</h3><span className="absolute right-[30px] top-[20px]">{visible5 ? '-' : '+'}</span>
+                            </div>
+
+                            <div className={`text-[#FAF0E6] sm:text-[16px] text-[13px] font-poppins overflow-hidden transition-all duration-500 ease-in-out ${visible5 ? 'scale-100 h-auto p-[20px] origin-top' : 'scale-y-0 h-[0px] origin-top'}`}>
+                                <p>Always. No need to pay a dime. All upgrades are optional, and most essential audio editing tools can be used without a premium subscription.</p>
+                            </div>
                         </div>
                     </div>
                 </div>
