@@ -53,7 +53,6 @@ const Home = () => {
     const [visible3, setvisible3] = useState(false)
     const [visible4, setvisible4] = useState(false)
     const [visible5, setvisible5] = useState(false)
-    const [visible6, setvisible6] = useState(false)
 
     const handleplus1 = () => {
         setvisible1(!visible1)
@@ -61,7 +60,6 @@ const Home = () => {
         setvisible4(false)
         setvisible5(false)
         setvisible3(false)
-        setvisible6(false)
     }
     const handleplus2 = () => {
         setvisible2(!visible2)
@@ -69,7 +67,6 @@ const Home = () => {
         setvisible4(false)
         setvisible5(false)
         setvisible3(false)
-        setvisible6(false)
     }
     const handleplus3 = () => {
         setvisible3(!visible3)
@@ -77,7 +74,6 @@ const Home = () => {
         setvisible4(false)
         setvisible5(false)
         setvisible1(false)
-        setvisible6(false)
     }
     const handleplus4 = () => {
         setvisible4(!visible4)
@@ -85,7 +81,6 @@ const Home = () => {
         setvisible1(false)
         setvisible5(false)
         setvisible3(false)
-        setvisible6(false)
     }
     const handleplus5 = () => {
         setvisible5(!visible5)
@@ -93,16 +88,13 @@ const Home = () => {
         setvisible4(false)
         setvisible1(false)
         setvisible3(false)
-        setvisible6(false)
     }
-    const handleplus6 = () => {
-        setvisible6(!visible6)
-        setvisible2(false)
-        setvisible4(false)
-        setvisible5(false)
-        setvisible3(false)
-        setvisible1(false)
-    }
+
+    const [selectedLanguage, setSelectedLanguage] = useState('english');
+
+    const handleLanguageChange = (e) => {
+        setSelectedLanguage(e.target.value);
+    };
 
     return (
         <div>
@@ -168,7 +160,12 @@ const Home = () => {
                     <div className='sm:w-1/2 mx-[20px]'>
                         <h1 className='font-poppins font-bold text-[#352F44] sm:text-[35px] text-[22px] sm:my-[10px] my-[10px] '>Every tool you need to work with audio files in one place</h1>
                         <h1 className='font-poppins text-[#5C5470] sm:text-[20px] text-[15px] '>Every tool you need to use audios, at your fingertips. All are 100% FREE and easy to use! Merge, split, compress, convert audios with just a few clicks.</h1>
-                        <button onClick={handlegetstarted} className='bg-[#5C5470] font-poppins sm:text-[20px] text-[18px] p-[10px] rounded-xl text-[#FAF0E6] sm:my-[30px] my-[30px] hover:bg-[#352F44] transition-all duration-300 ease-in-out '>Get Started ></button>
+                        <button onClick={handlegetstarted} className='bg-[#5C5470] w-[220px] font-poppins sm:text-[20px] text-[18px] p-[10px] rounded-xl text-[#FAF0E6] sm:my-[30px] my-[30px] hover:bg-[#352F44] transition-all duration-300 ease-in-out '>Edit your audio <div className='inline-block ml-[10px] '>
+                            <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 20 20" stroke-linecap="round" stroke-linejoin="round" class="h-[18px] w-[18px]" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                                <line x1="5" y1="12" x2="19" y2="12"></line>
+                                <polyline points="12 5 19 12 12 19"></polyline>
+                            </svg>
+                        </div></button>
                     </div>
                     <div className='sm:w-1/2'>
                         <img src={homeimage} alt="wait" />
@@ -222,7 +219,7 @@ const Home = () => {
                     </div>
                 </div>
             </section>
-            <section className="bg-[#FAF0E6]  sm:py-[70px] py-[50px]">
+            <section className="bg-[#FAF0E6] border-b-[10px] border-[#B9B4C7] sm:py-[70px] py-[50px]">
                 <div className="max-w-[800px] mx-auto px-[15px] ">
                     <h2 className="sm:text-[40px] text-[25px] font-poppins font-bold text-[#352F44] text-center">FAQ ?</h2>
                     <div className="py-[30px]  ">
@@ -270,6 +267,63 @@ const Home = () => {
                             <div className={`text-[#FAF0E6] sm:text-[16px] text-[13px] font-poppins overflow-hidden transition-all duration-500 ease-in-out ${visible5 ? 'scale-100 h-auto p-[20px] origin-top' : 'scale-y-0 h-[0px] origin-top'}`}>
                                 <p>Always. No need to pay a dime. All upgrades are optional, and most essential audio editing tools can be used without a premium subscription.</p>
                             </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section className='bg-[#FAF0E6] sm:h-[60vh] h-[80vh] text-center'>
+                <div className='sm:p-[70px] p-[30px] '>
+                    <h1 className='font-poppins font-bold text-[#352F44] sm:text-[28px] text-[20px] '>More than an audio editing software</h1>
+                    <h1 className='font-poppins py-[20px] text-[#5C5470] sm:text-[18px] text-[15px] sm:mx-[200px] mx-[50px'>AudioMorpher offers so much more than just audio editing tools! It is first and foremost, a professional video editor. It has all the tools you need to create high-quality audio, from our background noise remover to our auto subtitle tool. You can also add royalty-free stock music and sound effects from our library. Start creating professional-quality music today with AudioMorpher!</h1>
+                    <button onClick={handlegetstarted} className='bg-[#5C5470] w-[220px] font-poppins sm:text-[20px] text-[18px] p-[10px] rounded-xl text-[#FAF0E6] sm:my-[30px] my-[15px] hover:bg-[#352F44] transition-all duration-300 ease-in-out '>Edit your audio <div className='inline-block ml-[10px] '>
+                        <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 20 20" stroke-linecap="round" stroke-linejoin="round" class="h-[18px] w-[18px]" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                            <line x1="5" y1="12" x2="19" y2="12"></line>
+                            <polyline points="12 5 19 12 12 19"></polyline>
+                        </svg>
+                    </div></button>
+                </div>
+            </section>
+            <section className='bg-[#352F44] sm:h-[50vh] h-[70vh] '>
+                <div className='grid sm:grid-cols-4 grid-cols-2 sm:mx-[100px] mx-[50px] sm:py-[50px] py-[30px]'>
+                    <h1 className='font-poppins text-[#FAF0E6] sm:text-[15px] text-[13px] hover:underline cursor-pointer sm:py-[10px] py-[5px] sm:mx-auto '>Home</h1>
+                    <h1 className='font-poppins text-[#FAF0E6] sm:text-[15px] text-[13px] hover:underline cursor-pointer sm:py-[10px] py-[5px] sm:mx-auto '>Features</h1>
+                    <h1 className='font-poppins text-[#FAF0E6] sm:text-[15px] text-[13px] hover:underline cursor-pointer sm:py-[10px] py-[5px] sm:mx-auto '>Pricing</h1>
+                    <h1 className='font-poppins text-[#FAF0E6] sm:text-[15px] text-[13px] hover:underline cursor-pointer sm:py-[10px] py-[5px] sm:mx-auto '>Tools</h1>
+                    <h1 className='font-poppins text-[#FAF0E6] sm:text-[15px] text-[13px] hover:underline cursor-pointer sm:py-[10px] py-[5px] sm:mx-auto '>FAQ</h1>
+                    <h1 className='font-poppins text-[#FAF0E6] sm:text-[15px] text-[13px] hover:underline cursor-pointer sm:py-[10px] py-[5px] sm:mx-auto '>Developers</h1>
+                    <h1 className='font-poppins text-[#FAF0E6] sm:text-[15px] text-[13px] hover:underline cursor-pointer sm:py-[10px] py-[5px] sm:mx-auto '>Business</h1>
+                    <h1 className='font-poppins text-[#FAF0E6] sm:text-[15px] text-[13px] hover:underline cursor-pointer sm:py-[10px] py-[5px] sm:mx-auto '>Education</h1>
+                    <h1 className='font-poppins text-[#FAF0E6] sm:text-[15px] text-[13px] hover:underline cursor-pointer sm:py-[10px] py-[5px] sm:mx-auto '>Our Story</h1>
+                    <h1 className='font-poppins text-[#FAF0E6] sm:text-[15px] text-[13px] hover:underline cursor-pointer sm:py-[10px] py-[5px] sm:mx-auto '>Blog</h1>
+                    <h1 className='font-poppins text-[#FAF0E6] sm:text-[15px] text-[13px] hover:underline cursor-pointer sm:py-[10px] py-[5px] sm:mx-auto '>Press</h1>
+                    <h1 className='font-poppins text-[#FAF0E6] sm:text-[15px] text-[13px] hover:underline cursor-pointer sm:py-[10px] py-[5px] sm:mx-auto '>Legal & Privacy</h1>
+                    <h1 className='font-poppins text-[#FAF0E6] sm:text-[15px] text-[13px] hover:underline cursor-pointer sm:py-[10px] py-[5px] sm:mx-auto '>Contact</h1>
+                </div>
+                <div className='sm:mx-[200px] sm:flex justify-between items-center'>
+                    <div>
+                        <select className='font-poppins text-[#352F44] sm:text-[16px] text-[13px] bg-[#FAF0E6] px-2 py-1 rounded-lg border-[2px] border-[#B9B4C7] sm:ml-[15px] ml-[30px] cursor-pointer ' value={selectedLanguage} onChange={handleLanguageChange}>
+                            <option value="english">English</option>
+                            <option value="hindi">Hindi</option>
+                        </select>
+                    </div>
+                    <div className='sm:flex justify-center items-center sm:gap-[15px] gap-[5px] sm:mx-0 mx-[30px]'>
+                        <h1 className='font-poppins text-[#FAF0E6] sm:text-[15px] text-[13px] mt-[30px] sm:mt-[0px] '> <span className='text-[17px]'>© </span>AudioMorpher - Your Audio Editor</h1>
+                        <div className='flex gap-[15px] sm:my-[0px] my-[30px]'>
+                            <a href="https://www.instagram.com/jk_a_583/">
+                                <svg stroke="currentColor" fill="#FAF0E6" stroke-width="0" viewBox="0 0 512 512" height="25px" width="25px" xmlns="http://www.w3.org/2000/svg"><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"></path></svg>
+                            </a>
+                            <a href="https://www.instagram.com/jk_a_583/">
+                                <svg stroke="currentColor" fill="#FAF0E6" stroke-width="0" viewBox="0 0 576 512" height="20px" width="20px" xmlns="http://www.w3.org/2000/svg"><path d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z"></path></svg>
+                            </a>
+                            <a href="https://www.instagram.com/jk_a_583/">
+                                <svg stroke="currentColor" fill="#FAF0E6" stroke-width="0" viewBox="0 0 448 512" height="20px" width="20px" xmlns="http://www.w3.org/2000/svg"><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"></path></svg>
+                            </a>
+                            <a href="https://www.instagram.com/jk_a_583/">
+                                <svg stroke="currentColor" fill="#FAF0E6" stroke-width="0" viewBox="0 0 448 512" height="20px" width="20px" xmlns="http://www.w3.org/2000/svg"><path d="M448,209.91a210.06,210.06,0,0,1-122.77-39.25V349.38A162.55,162.55,0,1,1,185,188.31V278.2a74.62,74.62,0,1,0,52.23,71.18V0l88,0a121.18,121.18,0,0,0,1.86,22.17h0A122.18,122.18,0,0,0,381,102.39a121.43,121.43,0,0,0,67,20.14Z"></path></svg>
+                            </a>
+                            <a href="https://www.instagram.com/jk_a_583/">
+                                <svg stroke="currentColor" fill="#FAF0E6" stroke-width="0" viewBox="0 0 512 512" height="20px" width="20px" xmlns="http://www.w3.org/2000/svg"><path d="M502.3 190.8c3.9-3.1 9.7-.2 9.7 4.7V400c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V195.6c0-5 5.7-7.8 9.7-4.7 22.4 17.4 52.1 39.5 154.1 113.6 21.1 15.4 56.7 47.8 92.2 47.6 35.7.3 72-32.8 92.3-47.6 102-74.1 131.6-96.3 154-113.7zM256 320c23.2.4 56.6-29.2 73.4-41.4 132.7-96.3 142.8-104.7 173.4-128.7 5.8-4.5 9.2-11.5 9.2-18.9v-19c0-26.5-21.5-48-48-48H48C21.5 64 0 85.5 0 112v19c0 7.4 3.4 14.3 9.2 18.9 30.6 23.9 40.7 32.4 173.4 128.7 16.8 12.2 50.2 41.8 73.4 41.4z"></path></svg>
+                            </a>
                         </div>
                     </div>
                 </div>
